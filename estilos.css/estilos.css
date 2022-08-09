@@ -270,4 +270,48 @@ background: radial-gradient(circle, rgba(44,44,48,1) 0%, rgba(188,211,238,1) 100
     .img_index{
         height: 600px;
     }
+    .grid_productos{
+        grid-template-columns: 500px;
+        grid-template-rows: repeat(5, 200px);
+    }
+    .mouse a{
+        background-image: url(../imagenes/mouse.1200px.png);
+    }
+    .teclados a{
+        background-image: url(../imagenes/teclado.1200px.png);
+    }
+    .monitores a{
+        background-image: url(../imagenes/monitores.1200px.png);
+    }
+    .sillas a{
+        background-image: url(../imagenes/sillas.1200px.png);
+    }
+    .auriculares a{
+        background-image: url(../imagenes/auriculares.1200px.png);
+    }
+    .grid_combos{
+        grid-template-columns: 400px;
+    grid-template-rows: repeat(4, 200px);
+    }
+    .combo_1 a{
+        background-image: url(../imagenes/combo-1.1200px.png);
+    }
+    .combo_2 a{
+        background-image: url(../imagenes/combo-2.1200px.png);
+    }
+    .combo_3 a{
+        background-image: url(../imagenes/combo-3.1200px.png);
+    }
+    .combo_4 a{
+        background-image: url(../imagenes/combo-4.1200px.png);
+    }
+
+    .grid_productos a:hover{
+        transform: scale(1.1);
+        transition-duration: 0.5s;
+    }
+    .grid_combos a:hover{
+        transform: scale(1.1);
+        transition-duration: 0.5s;
+    }
 }
