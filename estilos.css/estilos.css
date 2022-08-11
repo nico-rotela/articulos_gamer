@@ -60,15 +60,12 @@ background: radial-gradient(circle, rgba(44,44,48,1) 0%, rgba(188,211,238,1) 100
     color: aliceblue;
 }
 
-.img_index{
-    display: flex;
-    width: 70%;
-    height: 300px;
-    padding-top: 5px;
-    justify-content: center;
-    background-image: url(../imagenes/foto_index.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
+.slide {
+    padding-top: 10px;
+}
+
+.slide img {
+    height: 70vh;
 }
 
 .texto{
@@ -265,6 +262,9 @@ background: radial-gradient(circle, rgba(44,44,48,1) 0%, rgba(188,211,238,1) 100
     .img_index{
         height: 450px;
     }
+    .slide img{
+        height: 90vh;
+    }
 }
 @media (min-width: 1200px){
     .img_index{
@@ -313,5 +313,8 @@ background: radial-gradient(circle, rgba(44,44,48,1) 0%, rgba(188,211,238,1) 100
     .grid_combos a:hover{
         transform: scale(1.1);
         transition-duration: 0.5s;
+    }
+    .slide img{
+        height: 100vh;
     }
 }
