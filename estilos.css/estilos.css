@@ -181,6 +181,13 @@ background: radial-gradient(circle, rgba(44,44,48,1) 0%, rgba(188,211,238,1) 100
     grid-template-columns: 300px;
     grid-template-rows: repeat(4, 100px);
     justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    grid-row-gap: 5px;
+    grid-template-areas: "logitech"
+                         "redragon"
+                         "asus"
+                         "razer";
 }
 
 .grid_marcas > div{
@@ -194,6 +201,36 @@ background: radial-gradient(circle, rgba(44,44,48,1) 0%, rgba(188,211,238,1) 100
     justify-content: center;
     align-items: center;
 }
+
+/* nombres grid area -marcas- */
+.logitech{
+    grid-area: logitech;
+}
+    .logitech a{
+        background-image: url(../imagenes/logitech-marca.png);
+    }
+
+.redragon{
+    grid-area: redragon;
+}
+    .redragon a{
+        background-image: url(../imagenes/reddragon-marca.png);
+    }
+
+.asus{
+    grid-area: asus;
+}
+    .asus a{
+        background-image: url(../imagenes/asus-marca.png);
+    }
+
+.razer{
+    grid-area: razer;
+}
+    .razer a{
+        background-image: url(../imagenes/razer-marca.png);
+    }
+
 /*seccion -contactanos-*/
 .form{
     display: grid;
@@ -249,6 +286,7 @@ background: radial-gradient(circle, rgba(44,44,48,1) 0%, rgba(188,211,238,1) 100
     .img_index{
         height: 600px;
     }
+    /* productos 1200px*/
     .grid_productos{
         grid-template-columns: 500px;
         grid-template-rows: repeat(5, 200px);
@@ -268,9 +306,11 @@ background: radial-gradient(circle, rgba(44,44,48,1) 0%, rgba(188,211,238,1) 100
     .auriculares a{
         background-image: url(../imagenes/auriculares.1200px.png);
     }
+
+    /* combos 1200px*/
     .grid_combos{
         grid-template-columns: 400px;
-    grid-template-rows: repeat(4, 200px);
+        grid-template-rows: repeat(4, 200px);
     }
     .combo_1 a{
         background-image: url(../imagenes/combo-1.1200px.png);
@@ -293,7 +333,29 @@ background: radial-gradient(circle, rgba(44,44,48,1) 0%, rgba(188,211,238,1) 100
         transform: scale(1.1);
         transition-duration: 0.5s;
     }
+    /* carrousel 1200px*/
     .slide img{
         height: 100vh;
+    }
+    /*marcas 1200px*/
+    .grid_marcas{
+        grid-template-columns: 400px;
+        grid-template-rows: repeat(4, 200px);
+    }
+    .logitech a{
+        background-image: url(../imagenes/logitech-marca-1200px.png);
+    }
+    .redragon a{
+        background-image: url(../imagenes/redragon-marca-1200px.png);
+    }
+    .asus a{
+        background-image: url(../imagenes/asus-marca-1200px.png);
+    }
+    .razer a{
+        background-image: url(../imagenes/razer-marca-1200px.png);
+    }
+    .grid_marcas a:hover{
+        transform: scale(1.1);
+        transition-duration: 0.5s;
     }
 }
