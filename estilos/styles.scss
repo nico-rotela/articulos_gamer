@@ -1,3 +1,5 @@
+$gradiente: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(2,86,186,1) 100%, rgba(0,0,0,1) 100%);
+
 body {
     margin: 0%;
     padding: 0%;
@@ -8,16 +10,17 @@ body {
 }
 
 .grediente{
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(2,86,186,1) 100%, rgba(0,0,0,1) 100%);
+    background: $gradiente
 }
 
 .navegacion a{
     color: aliceblue;
 }
+
 .fondo_gris{
-height: auto;
-background: rgb(44,44,48);
-background: radial-gradient(circle, rgba(44,44,48,1) 0%, rgba(188,211,238,1) 100%, rgba(0,0,0,1) 100%);
+    height: auto;
+    background: rgb(44,44,48);
+    background: radial-gradient(circle, rgba(44,44,48,1) 0%, rgba(188,211,238,1) 100%, rgba(0,0,0,1) 100%);
 }
 
 .cont_index{
@@ -25,35 +28,38 @@ background: radial-gradient(circle, rgba(44,44,48,1) 0%, rgba(188,211,238,1) 100
     width: 100%;
     height: auto;
     justify-content: center;
-}
-.cont_index a{
-    text-decoration: none;
-    font-size: 30px;
-    color: aliceblue;
+
+    a{
+        text-decoration: none;
+        font-size: 30px;
+        color: aliceblue;
+    }
 }
 
 .slide {
     padding-top: 10px;
-}
 
-.slide img {
-    height: 70vh;
+    img{
+        height: 70vh;
+    }
 }
 
 .texto{
     font-style: italic;
     font-size: 20px;
     text-align: center;
-}
 
-.texto p {
-    margin-bottom: 0%;
+    p{
+        margin-bottom: 0%;
+    }
 }
 
 .somos{
     padding-bottom: 40px;
 }
-/*grid seccion productos*/
+
+/*seccion productos*/
+
 .grid_productos{
     display: grid;
     grid-template-columns: 300px;
@@ -68,57 +74,67 @@ background: radial-gradient(circle, rgba(44,44,48,1) 0%, rgba(188,211,238,1) 100
                          "sillas"
                          "auriculares";
 
-}
-
-.grid_productos > div{
-    display: flex;
-    background-color: rgb(28, 105, 194);
-}
-
-.grid_productos a{
-    color: aliceblue;
-    font-size: 30px;
-    font-style: italic;
-    text-decoration: none;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-}
-
-/* nombres grid area -productos page- */
-    .mouse{
-        grid-area: mouse;
+    & > div{
+        display: flex;
+        background-color: rgb(28, 105, 194);
     }
-    .mouse a{
+
+    & a{
+        color: aliceblue;
+        font-size: 30px;
+        font-style: italic;
+        text-decoration: none;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+    }
+}
+
+/* grid area -productos page- */
+
+.mouse{
+    grid-area: mouse;
+
+    a{
         background-image: url(../imagenes/mouse_productos.png);
     }
-    .taclados{
-        grid-area: teclados;
-    }
-    .teclados a{
+}
+
+.teclados{
+    grid-area: teclados;
+
+    a{
         background-image: url(../imagenes/teclado_productos.png);
     }
-    .monitores{
-        grid-area: monitores;
-    }
-    .monitores a{
+}
+
+.monitores{
+    grid-area: monitores;
+
+    a{
         background-image: url(../imagenes/monitores_productos.png);
     }
-    .auriculares{
-        grid-area: auriculares;
-    }
-    .auriculares a{
+}
+
+.auriculares{
+    grid-area: auriculares;
+
+    a{
         background-image: url(../imagenes/auriculares_productos.png);
     }
-    .sillas{
-        grid-area: sillas;
-    }
-    .sillas a{
+}
+
+.sillas{
+    grid-area: sillas;
+
+    a{
         background-image: url(../imagenes/sillas_productos.png);
     }
+}
 
-/*seccion combos*/
+/* seccion combos */
+
 .grid_combos{
     display: grid;
     grid-template-columns: 300px;
@@ -131,51 +147,60 @@ background: radial-gradient(circle, rgba(44,44,48,1) 0%, rgba(188,211,238,1) 100
                          "combo2"
                          "combo3"
                          "combo4";
+
+    & > div{
+        display: flex;
+        background-color:rgb(28, 105, 194);
+    }
+
+    & a{
+        color: aliceblue;
+        font-size: 20px;
+        font-style: italic;
+        text-decoration: none;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+    }
 }
 
-.grid_combos > div{
-    display: flex;
-    background-color:rgb(28, 105, 194);
-}
+ /* grid area -combos page- */
 
-.grid_combos a{
-    color: aliceblue;
-    font-size: 20px;
-    font-style: italic;
-    text-decoration: none;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-}
-
-/*nombre grid area -combos page-*/
 .combo_1{
     grid-area: combo1;
-}
-.combo_1 a{
-    background-image: url(../imagenes/combo-1.png);
-}
+
+    a{
+        background-image: url(../imagenes/combo-1.png);
+    }
+} 
+
 .combo_2{
     grid-area: combo2;
-}
-.combo_2 a{
-    background-image: url(../imagenes/combo-2.png);
-}
-.combo_3{
-    grid-area: combo3;
-}
-.combo_3 a{
-    background-image: url(../imagenes/combo-3.png);
-}
-.combo_4{
-    grid-area: combo4;
-}
-.combo_4 a{
-    background-image: url(../imagenes/combo-4.png);
+
+    a{
+        background-image: url(../imagenes/combo-2.png);
+    }
 }
 
-/*seccion -marcas page-*/
+.combo_3{
+    grid-area: combo3;
+
+    a{
+        background-image: url(../imagenes/combo-3.png);
+    }
+}
+
+.combo_4{
+    grid-area: combo4;
+
+    a{
+        background-image: url(../imagenes/combo-4.png);
+    }
+}
+
+/* seccion marcas */
+
 .grid_marcas{
     display: grid;
     grid-template-columns: 300px;
@@ -188,50 +213,56 @@ background: radial-gradient(circle, rgba(44,44,48,1) 0%, rgba(188,211,238,1) 100
                          "redragon"
                          "asus"
                          "razer";
+    
+    & > div{
+        display: flex;
+        background-color:rgb(28, 105, 194);
+    }
+
+    & a{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
-.grid_marcas > div{
-    display: flex;
-    background-color:rgb(28, 105, 194);
-}
+/* grid area -marcas page- */
 
-.grid_marcas a{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-}
-
-/* nombres grid area -marcas- */
 .logitech{
     grid-area: logitech;
-}
-    .logitech a{
+
+    a{
         background-image: url(../imagenes/logitech-marca.png);
     }
+}
 
 .redragon{
     grid-area: redragon;
-}
-    .redragon a{
+
+    a{
         background-image: url(../imagenes/reddragon-marca.png);
     }
+}
 
 .asus{
     grid-area: asus;
-}
-    .asus a{
+
+    a{
         background-image: url(../imagenes/asus-marca.png);
     }
+}
 
 .razer{
     grid-area: razer;
-}
-    .razer a{
+
+    a{
         background-image: url(../imagenes/razer-marca.png);
     }
+}
 
-/*seccion -contactanos-*/
+/* seccion contacto*/
+
 .form{
     display: grid;
     grid-template-columns: 300px;
@@ -242,29 +273,34 @@ background: radial-gradient(circle, rgba(44,44,48,1) 0%, rgba(188,211,238,1) 100
 }
 
 /* footer */
+
 .footer{
     display: flex;
     justify-content: space-between;
 
     background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(2,86,186,1) 100%, rgba(0,0,0,1) 100%);
-}
-    .footer a{
+
+    a{
         text-decoration: none;
         color: aliceblue;
     }
-    .footer li{
+
+    li{
         list-style: none;
     }
-    .redes{
-        display: flex;
-        padding-right: 5px;
-    }
-    .imagenes-redes{
-        display: flex;
-        align-items: center;
-        margin-right: 2px;
-    }
+}
 
+.redes{
+    display: flex;
+    padding-right: 5px;
+}
+
+.imagenes-redes{
+    display: flex;
+    align-items: center;
+    margin-right: 2px;
+}
+  
 .menu_footer{
     font-size: 15px;
 }
@@ -274,6 +310,7 @@ background: radial-gradient(circle, rgba(44,44,48,1) 0%, rgba(188,211,238,1) 100
         height: 400px;
     }
 }
+
 @media (min-width: 900px){
     .img_index{
         height: 450px;
@@ -282,80 +319,104 @@ background: radial-gradient(circle, rgba(44,44,48,1) 0%, rgba(188,211,238,1) 100
         height: 90vh;
     }
 }
+
 @media (min-width: 1200px){
     .img_index{
         height: 600px;
     }
-    /* productos 1200px*/
+
+    /*productos*/
+
     .grid_productos{
         grid-template-columns: 500px;
         grid-template-rows: repeat(5, 200px);
+
+        & a:hover{
+            transform: scale(1.1);
+            transition-duration: 0.5s;
+        }
     }
+
     .mouse a{
         background-image: url(../imagenes/mouse.1200px.png);
     }
+
     .teclados a{
         background-image: url(../imagenes/teclado.1200px.png);
     }
+
     .monitores a{
         background-image: url(../imagenes/monitores.1200px.png);
     }
+
     .sillas a{
         background-image: url(../imagenes/sillas.1200px.png);
     }
+
     .auriculares a{
         background-image: url(../imagenes/auriculares.1200px.png);
     }
 
-    /* combos 1200px*/
+    /* combos */
+
     .grid_combos{
         grid-template-columns: 400px;
         grid-template-rows: repeat(4, 200px);
+
+        & a:hover{
+            transform: scale(1.1);
+            transition-duration: 0.5s;
+        }
     }
+
     .combo_1 a{
         background-image: url(../imagenes/combo-1.1200px.png);
     }
+
     .combo_2 a{
         background-image: url(../imagenes/combo-2.1200px.png);
     }
+
     .combo_3 a{
         background-image: url(../imagenes/combo-3.1200px.png);
     }
+
     .combo_4 a{
         background-image: url(../imagenes/combo-4.1200px.png);
     }
 
-    .grid_productos a:hover{
-        transform: scale(1.1);
-        transition-duration: 0.5s;
-    }
-    .grid_combos a:hover{
-        transform: scale(1.1);
-        transition-duration: 0.5s;
-    }
-    /* carrousel 1200px*/
+    /* carrousel */
+
     .slide img{
         height: 100vh;
     }
-    /*marcas 1200px*/
+
+    /* marcas */
+
     .grid_marcas{
         grid-template-columns: 400px;
         grid-template-rows: repeat(4, 200px);
+
+        & a:hover{
+            transform: scale(1.1);
+            transition-duration: 0.5s;
+        }
     }
+
     .logitech a{
         background-image: url(../imagenes/logitech-marca-1200px.png);
     }
+
     .redragon a{
         background-image: url(../imagenes/redragon-marca-1200px.png);
     }
+
     .asus a{
         background-image: url(../imagenes/asus-marca-1200px.png);
     }
+
     .razer a{
         background-image: url(../imagenes/razer-marca-1200px.png);
     }
-    .grid_marcas a:hover{
-        transform: scale(1.1);
-        transition-duration: 0.5s;
-    }
+
 }
